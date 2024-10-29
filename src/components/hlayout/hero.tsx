@@ -2,6 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 import H2 from '../../../public/assests/Himages/H2.png';
+import Link from 'next/link';
 
 const Hero = () => {
   return (
@@ -34,9 +35,11 @@ const Hero = () => {
               chambray.
             </p>
             <div className="flex justify-center md:justify-start">
+              <Link href='/womens'>
               <button className="inline-flex text-buttontextcolor bg-buttoncolor border-0 py-3 px-8 focus:outline-none hover:bg-hoverbuttoncolor hover:text-hovertextbuttoncolor rounded text-lg transition-all duration-300 transform hover:scale-105">
-                Add To Cart
+                View More 
               </button>
+              </Link>
             </div>
           </div>
         </div>

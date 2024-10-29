@@ -9,6 +9,8 @@ import {
     SheetContent,
     SheetTrigger,
 } from "@/components/ui/sheet";
+import Loading from '@/app/(others)/loading';
+import { TbTruckLoading } from 'react-icons/tb';
 
 const Navbar = () => {
   return (
@@ -34,32 +36,23 @@ const Navbar = () => {
 
           {/* Mobile Menu Trigger (right side on small screens) */}
           <Sheet>
-            <SheetTrigger className="text-2xl text-white ml-3 cursor-pointer md:hidden">
-              <RiMenu3Line />
-            </SheetTrigger>
+  <SheetTrigger className="md:hidden">
+    <RiMenu3Line />
+  </SheetTrigger>
+  <SheetContent>
+    <nav className="md:ml-auto md:mr-auto flex flex-col">
 
-            {/* Mobile Menu Content */}
-            <SheetContent className="bg-gray-900">
-              <nav className="flex flex-col items-center justify-center text-xl gap-5 mt-8">
-                <Link href="/" className="relative group mb-4">
-                  <span className="text-hovercolor group-hover:text-hovercolor transition-all duration-300">Home</span>
-                  <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-hovercolor transition-all duration-300 group-hover:w-full"></span>
-                </Link>
-                <Link href="/mens" className="relative group mb-4">
-                  <span className="text-hovercolor group-hover:text-hovercolor transition-all duration-300">Mens Fragrances</span>
-                  <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-hovercolor transition-all duration-300 group-hover:w-full"></span>
-                </Link>
-                <Link href="#feature" className="relative group mb-4">
-                  <span className="text-hovercolor group-hover:text-hovercolor transition-all duration-300">Women Fragrances</span>
-                  <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-hovercolor transition-all duration-300 group-hover:w-full"></span>
-                </Link>
-                <Link href="#Contact" className="relative group mb-4">
-                  <span className="text-hovercolor group-hover:text-hovercolor transition-all duration-300">Contact</span>
-                  <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-hovercolor transition-all duration-300 group-hover:w-full"></span>
-                </Link>
-              </nav>
-            </SheetContent>
-          </Sheet>
+      <Link href="/" className="mb-2 text-customSimple hover:text-hovercolor md:hidden">Home</Link>
+      <Link href="/mens" className="mb-2 text-customSimple hover:text-hovercolor md:hidden">Mens Fragrances</Link>
+      <Link href="/womens" className="mb-2 text-customSimple hover:text-hovercolor md:hidden">Women Fragrances</Link>
+      {/* <Link href={"#Contact"} className="mb-2 text-customSimple hover:text-hovercolor md:hidden">Contact</Link> */}
+      <Link href="/mens" className="mb-2 text-customSimple hover:text-hovercolor md:hidden ">View Product</Link>
+      
+    </nav>
+  </SheetContent>
+</Sheet>
+
+
 
           {/* Desktop Menu */}
           <nav className="hidden md:flex md:ml-auto flex-wrap items-center justify-center text-xl gap-9">
@@ -75,8 +68,8 @@ const Navbar = () => {
               <span className="text-customDarkGreen group-hover:text-hovercolor transition-all duration-300">Women Fragrances</span>
               <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-hovercolor transition-all duration-300 group-hover:w-full"></span>
             </Link>
-            <Link href="#Contact" className="relative group mr-5">
-              <span className="text-customDarkGreen group-hover:text-hovercolor transition-all duration-300">Contact</span>
+            <Link href="/mens" className="relative group mr-5">
+              <span className="text-customDarkGreen group-hover:text-hovercolor transition-all duration-300">View Product</span>
               <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-hovercolor transition-all duration-300 group-hover:w-full"></span>
             </Link>
           </nav>
