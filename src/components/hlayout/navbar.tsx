@@ -9,8 +9,8 @@ import {
     SheetContent,
     SheetTrigger,
 } from "@/components/ui/sheet";
-import Loading from '@/app/(others)/loading';
-import { TbTruckLoading } from 'react-icons/tb';
+// import Loading from '@/app/(others)/loading';
+// import { TbTruckLoading } from 'react-icons/tb';
 
 const Navbar = () => {
   return (
@@ -46,7 +46,7 @@ const Navbar = () => {
       <Link href="/mens" className="mb-2 text-customSimple hover:text-hovercolor md:hidden">Mens Fragrances</Link>
       <Link href="/womens" className="mb-2 text-customSimple hover:text-hovercolor md:hidden">Women Fragrances</Link>
       {/* <Link href={"#Contact"} className="mb-2 text-customSimple hover:text-hovercolor md:hidden">Contact</Link> */}
-      <Link href="/mens" className="mb-2 text-customSimple hover:text-hovercolor md:hidden ">View Product</Link>
+      <Link href="/mens" className="mb-2 text-customSimple hover:text-hovercolor md:hidden">View Product</Link>
       
     </nav>
   </SheetContent>
