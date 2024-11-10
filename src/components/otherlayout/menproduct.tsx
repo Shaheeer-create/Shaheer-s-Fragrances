@@ -8,6 +8,13 @@ import Mens6 from "../../../public/assests/mens/mens 6.png";
 import Mens7 from "../../../public/assests/mens/mens 7.png";
 import Mens8 from "../../../public/assests/mens/mens 8.png";
 import Image from "next/image";
+import {Anton} from 'next/font/google';
+
+const anton = Anton({
+  subsets: ['latin'],
+  weight: "400"
+});
+
 
 const Menproduct = () => {
   return (
@@ -16,7 +23,7 @@ const Menproduct = () => {
       <section className="text-gray-400 body-font bg-gradient-to-r from-mbodystartcolor to-mbodyendcolor">
         <div className="container px-5 py-24 mx-auto animate-fade-in">
           <div className="w-full mb-20 text-center">
-            <h1 className="sm:text-3xl text-3xl font-medium title-font mb-2  text-white animate-fade-in">
+            <h1 className={`sm:text-3xl text-3xl font-medium title-font mb-2  text-white animate-fade-in ${anton.className}`}>
               Mens Perfume
             </h1>
             <div className="h-1 w-20 bg-mbodyendcolor rounded mx-auto animate-fade-in" />

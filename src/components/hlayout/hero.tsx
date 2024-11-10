@@ -3,7 +3,19 @@ import React from 'react';
 import Image from 'next/image';
 import H2 from '../../../public/assests/Himages/H2.png';
 import Link from 'next/link';
+import { Oswald} from 'next/font/google';
+import {Lora} from 'next/font/google';
+import {Dancing_Script} from 'next/font/google';
 
+
+
+const dancing = Dancing_Script({ subsets: ['latin'] });
+
+const oswald = Oswald({ subsets: ['latin'] });
+const lora = Lora({
+  // weight: '400',
+  subsets: ['latin'],
+})
 const Hero = () => {
   return (
     <div>
@@ -23,20 +35,20 @@ const Hero = () => {
 
           {/* Text Section */}
           <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col items-center pt-10 animate-fade-in"> {/* Adjusted padding-top for alignment */}
-            <h1 className="title-font sm:text-5xl text-4xl mb-4 text-hcolor font-bold leading-tight text-center"> {/* Centering the heading */}
+            <h1 className={`title-font sm:text-5xl text-4xl mb-4 text-hcolor font-bold leading-tight text-center ${oswald.className}`}> {/* Centering the heading */}
               Fantasy By
               <br className="hidden lg:inline-block" />
              Hira Mani
             </h1>
-            <p className="mb-8 leading-relaxed text-pcolor text-lg text-center md:text-left">
-              Copper mug try-hard pitchfork pour-over freegan heirloom neutra air
+            <p className={`mb-8 leading-relaxed text-pcolor text-lg text-center md:text-left ${lora.className}`}>
+              Copper mug try-hard pitchfork pour-ovr freegan heirloom neutra air
               plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk
               tote bag selvage hot chicken authentic turmeric truffaut hexagon try-hard
               chambray.
             </p>
             <div className="flex justify-center md:justify-start">
               <Link href='/womens'>
-              <button className="inline-flex text-buttontextcolor bg-buttoncolor border-0 py-3 px-8 focus:outline-none hover:bg-hoverbuttoncolor hover:text-hovertextbuttoncolor rounded text-lg transition-all duration-300 transform hover:scale-105">
+            <button className={`inline-flex text-buttontextcolor bg-buttoncolor border-0 py-3 px-8 focus:outline-none hover:bg-hoverbuttoncolor hover:text-hovertextbuttoncolor rounded text-2xl transition-all duration-300 transform hover:scale-105  ${dancing.className}`}>
                 View More 
               </button>
               </Link>
